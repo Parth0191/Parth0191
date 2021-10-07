@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeMasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emp_plant" Type="varchar" MaxLength="50" />
+    <Property Name="emp_category" Type="varchar" MaxLength="50" />
+    <Property Name="emp_code" Type="varchar" MaxLength="50" />
+    <Property Name="emp_first_name" Type="varchar" MaxLength="50" />
+    <Property Name="emp_middel_name" Type="varchar" MaxLength="50" />
+    <Property Name="emp_last_name" Type="varchar" MaxLength="50" />
+    <Property Name="emp_department" Type="varchar" MaxLength="50" />
+    <Property Name="repoting_manager" Type="varchar" MaxLength="50" />
+    <Property Name="emp_designation" Type="varchar" MaxLength="50" />
+    <Property Name="emp_contact" Type="varchar" MaxLength="10" />
+    <Property Name="emp_email" Type="varchar" MaxLength="50" />
+    <Property Name="date_of_join" Type="date" />
+    <Property Name="job_relieving" Type="date" />
+    <Property Name="blood_group" Type="varchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="emp_age" Type="int" />
+    <Property Name="emp_gender" Type="varchar" MaxLength="50" />
+    <Property Name="active" Type="bit" />
+    <Property Name="emp_image" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="EmployeeMasterModelStoreContainer">
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

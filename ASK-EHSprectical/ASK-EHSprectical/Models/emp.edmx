@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EmployeeMasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="employee">
+          <Key>
+            <PropertyRef Name="emp_id" />
+          </Key>
+          <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="emp_plant" Type="varchar" MaxLength="50" />
+          <Property Name="emp_category" Type="varchar" MaxLength="50" />
+          <Property Name="emp_code" Type="varchar" MaxLength="50" />
+          <Property Name="emp_first_name" Type="varchar" MaxLength="50" />
+          <Property Name="emp_middel_name" Type="varchar" MaxLength="50" />
+          <Property Name="emp_last_name" Type="varchar" MaxLength="50" />
+          <Property Name="emp_department" Type="varchar" MaxLength="50" />
+          <Property Name="repoting_manager" Type="varchar" MaxLength="50" />
+          <Property Name="emp_designation" Type="varchar" MaxLength="50" />
+          <Property Name="emp_contact" Type="varchar" MaxLength="10" />
+          <Property Name="emp_email" Type="varchar" MaxLength="50" />
+          <Property Name="date_of_join" Type="date" />
+          <Property Name="job_relieving" Type="date" />
+          <Property Name="blood_group" Type="varchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="emp_age" Type="int" />
+          <Property Name="emp_gender" Type="varchar" MaxLength="50" />
+          <Property Name="active" Type="bit" />
+          <Property Name="emp_image" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="EmployeeMasterModelStoreContainer">
+          <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EmployeeMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="employee">
+          <Key>
+            <PropertyRef Name="emp_id" />
+          </Key>
+          <Property Name="emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="emp_plant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_middel_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="repoting_manager" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="emp_contact" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="emp_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="date_of_join" Type="DateTime" Precision="0" />
+          <Property Name="job_relieving" Type="DateTime" Precision="0" />
+          <Property Name="blood_group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="emp_age" Type="Int32" />
+          <Property Name="emp_gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="emp_image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="EmployeeMasterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="employees" EntityType="Self.employee" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EmployeeMasterModelStoreContainer" CdmEntityContainer="EmployeeMasterEntities">
+          <EntitySetMapping Name="employees">
+            <EntityTypeMapping TypeName="EmployeeMasterModel.employee">
+              <MappingFragment StoreEntitySet="employee">
+                <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+                <ScalarProperty Name="emp_plant" ColumnName="emp_plant" />
+                <ScalarProperty Name="emp_category" ColumnName="emp_category" />
+                <ScalarProperty Name="emp_code" ColumnName="emp_code" />
+                <ScalarProperty Name="emp_first_name" ColumnName="emp_first_name" />
+                <ScalarProperty Name="emp_middel_name" ColumnName="emp_middel_name" />
+                <ScalarProperty Name="emp_last_name" ColumnName="emp_last_name" />
+                <ScalarProperty Name="emp_department" ColumnName="emp_department" />
+                <ScalarProperty Name="repoting_manager" ColumnName="repoting_manager" />
+                <ScalarProperty Name="emp_designation" ColumnName="emp_designation" />
+                <ScalarProperty Name="emp_contact" ColumnName="emp_contact" />
+                <ScalarProperty Name="emp_email" ColumnName="emp_email" />
+                <ScalarProperty Name="date_of_join" ColumnName="date_of_join" />
+                <ScalarProperty Name="job_relieving" ColumnName="job_relieving" />
+                <ScalarProperty Name="blood_group" ColumnName="blood_group" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="emp_age" ColumnName="emp_age" />
+                <ScalarProperty Name="emp_gender" ColumnName="emp_gender" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="emp_image" ColumnName="emp_image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

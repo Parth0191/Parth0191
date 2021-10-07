@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeeMasterModelStoreContainer" CdmEntityContainer="EmployeeMasterEntities">
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="EmployeeMasterModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="emp_plant" ColumnName="emp_plant" />
+          <ScalarProperty Name="emp_category" ColumnName="emp_category" />
+          <ScalarProperty Name="emp_code" ColumnName="emp_code" />
+          <ScalarProperty Name="emp_first_name" ColumnName="emp_first_name" />
+          <ScalarProperty Name="emp_middel_name" ColumnName="emp_middel_name" />
+          <ScalarProperty Name="emp_last_name" ColumnName="emp_last_name" />
+          <ScalarProperty Name="emp_department" ColumnName="emp_department" />
+          <ScalarProperty Name="repoting_manager" ColumnName="repoting_manager" />
+          <ScalarProperty Name="emp_designation" ColumnName="emp_designation" />
+          <ScalarProperty Name="emp_contact" ColumnName="emp_contact" />
+          <ScalarProperty Name="emp_email" ColumnName="emp_email" />
+          <ScalarProperty Name="date_of_join" ColumnName="date_of_join" />
+          <ScalarProperty Name="job_relieving" ColumnName="job_relieving" />
+          <ScalarProperty Name="blood_group" ColumnName="blood_group" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="emp_age" ColumnName="emp_age" />
+          <ScalarProperty Name="emp_gender" ColumnName="emp_gender" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="emp_image" ColumnName="emp_image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
